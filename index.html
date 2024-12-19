@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="min-h-screen bg-red-500 flex justify-center items-center overflow-hidden">
+        <div id="boxOne" class="size-96 bg-black rounded-xl border border-green-500"></div>
+    </section>
+    <section
+        class="min-h-screen bg-gradient-to-b from-yellow-500 via-red-700 to-green-700 flex justify-center items-center overflow-hidden">
+        <div id="boxTwo" class="size-96 bg-black rounded-xl border border-green-500"></div>
+    </section>
+    <section
+        class="min-h-screen bg-gradient-to-r from-violet-500  to-orange-700 flex justify-center items-center overflow-hidden">
+        <div id="boxThree" class="size-96 bg-black rounded-xl border border-green-500"></div>
+    </section>
+    <section
+        class="min-h-screen bg-gradient-to-b from-blue-600  to-pink-600 flex justify-center items-center overflow-hidden">
+        <div id="boxFour" class="size-96 bg-black rounded-xl border border-green-500"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>
