@@ -1,43 +1,61 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap Flip Animation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             }
+
+        .card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            will-change: transform; 
+            transform-origin: center;
         }
-    </script>
+
+        .card-back,
+        .card-front {
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
 </head>
-
 <body>
-    <section class="min-h-screen bg-red-500 flex justify-center items-center overflow-hidden">
-        <div id="boxOne" class="size-96 bg-black rounded-xl border border-green-500"></div>
+    <section class="min-h-[50vh]"></section>
+    <section class="flex pin-section justify-center items-center gap-5 sm:gap-8 lg:gap-10 min-h-screen flex-wrap">
+        <div class="card-container flex justify-center items-center gap-5 flex-wrap">
+            <div class="card cardOne relative md:w-[280px] lg:w-[320px] w-48 aspect-[314/438] text-base bg-black rounded-lg">
+                <div class="card-back bg-[url(./assets/images/dodge.jpg)] bg-center bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full rounded-xl"></div>
+                <div class="card-front bg-black flex justify-center items-center absolute top-0 left-0 w-full h-full rounded-xl">
+                    <p class="text-xl font-semibold text-white">Dodge-Challanger</p>
+                </div>
+            </div>
+            <div class="card cardTwo relative md:w-[280px] lg:w-[320px] w-48 aspect-[314/438] text-base bg-black rounded-xl">
+                <div class="card-back bg-[url(./assets/images/mustang.jpg)] bg-center bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full rounded-xl"></div>
+                <div class="card-front bg-black flex justify-center items-center absolute top-0 left-0 w-full h-full rounded-xl">
+                    <p class="text-xl font-semibold text-white">Mustang</p>
+                </div>
+            </div>
+            <div class="card cardThree relative md:w-[280px] lg:w-[320px] w-48 aspect-[314/438] text-base bg-black rounded-xl">
+                <div class="card-back bg-[url(./assets/images/g-wagon.jpg)] bg-center bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full rounded-xl"></div>
+                <div class="card-front bg-black flex justify-center items-center absolute top-0 left-0 w-full h-full rounded-xl">
+                    <p class="text-xl font-semibold text-white">G-Wagon</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section
-        class="min-h-screen bg-gradient-to-b from-yellow-500 via-red-700 to-green-700 flex justify-center items-center overflow-hidden">
-        <div id="boxTwo" class="size-96 bg-black rounded-xl border border-green-500"></div>
-    </section>
-    <section
-        class="min-h-screen bg-gradient-to-r from-violet-500  to-orange-700 flex justify-center items-center overflow-hidden">
-        <div id="boxThree" class="size-96 bg-black rounded-xl border border-green-500"></div>
-    </section>
-    <section
-        class="min-h-screen bg-gradient-to-b from-blue-600  to-pink-600 flex justify-center items-center overflow-hidden">
-        <div id="boxFour" class="size-96 bg-black rounded-xl border border-green-500"></div>
-    </section>
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="/assets/js/app.js"></script>
-</body>
 
+    <script src="./assets/js/app.js"></script>
+</body>
 </html>
