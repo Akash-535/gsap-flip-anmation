@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(80deg, pink, red, brown, lightpink);
+  overflow: hidden;
+}
+
+.cube {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-origin: center center;
+}
+
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 2px solid palegreen;
+}
+
+.front {
+  transform: translateZ(75px);
+  background-image: url(../images/dodge.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.back {
+  transform: rotateY(180deg) translateZ(75px);
+  background-image: url(../images/dodge.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(75px);
+  background-image: url(../images/dodge.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.right {
+  transform: rotateY(90deg) translateZ(75px);
+  background-image: url(../images/g-wagon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.top {
+  transform: rotateX(90deg) translateZ(75px);
+  background-image: url(../images/mustang.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(75px);
+  background-image: url(../images/nissan-gtr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
