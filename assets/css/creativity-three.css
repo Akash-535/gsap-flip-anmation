@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.icon {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  border-radius: 100px;
+  animation: wave 5s ease-in-out infinite;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+  width: 2px;
+  height: 1000px;
+  background-color: white;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.instagram {
+  background-image: url("../images/svg/instagram.svg");
+  animation-delay: 1s;
+}
+
+.twitter {
+  background-image: url("../images/svg/twitter.svg");
+  animation-delay: 1.5s;
+}
+
+.facebook {
+  background-image: url("../images/svg/facebook.svg");
+  animation-delay: 2s;
+}
+
+.linkedin {
+  background-image: url("../images/svg/linked-in.svg");
+  animation-delay: 2.5s;
+}
+
+.github {
+  background-image: url("../images/svg/github.svg");
+  animation-delay: 3s;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 800px) {
+  .icon::before {
+    top: -500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    align-items: center;
+    gap: 10px;
+  }
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+  .icon::before {
+    top: -500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+}
