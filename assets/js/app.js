@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".pin-section",
-        start: "top 20%",
+        start: "center 80%",
         scrub: 5,
         pin: true,
         invalidateOnRefresh: true,
