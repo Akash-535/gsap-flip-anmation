@@ -206,13 +206,3 @@ section {
 ::view-transition-new(*) {
   height: 100%;
 }
-
-::view-transition-old(button-label),
-::view-transition-new(button-label) {
-  width: fit-content;
-}
-
-::view-transition-old(button-label) {
-  animation-name: fade-out;
-  animation-duration: 0.6s;
-}
